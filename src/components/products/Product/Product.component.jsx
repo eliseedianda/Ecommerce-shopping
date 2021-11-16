@@ -12,12 +12,13 @@ import useStyles from "./product.styles";
 
 const Product = ({ product }) => {
   const classes = useStyles();
+  console.log(product);
   return (
     <Card className={classes.root}>
       <CardMedia
         className={classes.media}
         title={product.name}
-        img={product.image}
+        image={product.image.url}
       />
       <CardContent>
         <div className={classes.cardContent}>
@@ -25,12 +26,14 @@ const Product = ({ product }) => {
             {product.name}
           </Typography>
           <Typography variant="h5" gutterBottom>
-            {product.price}
+            {product.price.formatted_with_symbol}
           </Typography>
         </div>
-        <Typography variant="body2" color="textSecondary">
-          {product.description}
-        </Typography>
+        <Typography
+          variant="body2"
+          color="textSecondary"
+          dangerouslySetInnerHTML={{ __html: product.description }}
+        ></Typography>
       </CardContent>
       <CardActions disableSpacing className={classes.cardActions}>
         <IconButton aria-label="Add to cart">
