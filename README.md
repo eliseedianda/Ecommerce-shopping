@@ -1,4 +1,5 @@
-# Getting Started with Create React App
+# ED-commerce website
+![Screenshot (342)](https://user-images.githubusercontent.com/93252368/144259709-67e01906-a934-49b8-97a2-ee7bd6260624.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
